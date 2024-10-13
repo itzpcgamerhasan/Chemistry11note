@@ -38,6 +38,9 @@ background: linear-gradient(
     font-weight: 500;
     font-family: "Tiro Bangla", serif;
 }
+.basics ul li span{
+    font-size: 16px
+}
 span.a{
     font-size: 22px;
     font-weight: 600;
