@@ -1,8 +1,7 @@
 body{
     font-family: "Hind Siliguri", sans-serif;
-    margin: 0px;
     padding: 0;
-    width: 100%;
+    width: 97%;
     margin-left:10px;
 }
 header{
@@ -68,7 +67,7 @@ hr{
     color: rgb(143, 145, 255);
     
 }
-ul ul li{
+ul ul li {
     font-family: "Baloo Da 2", sans-serif;
     font-weight: 600;
 }
@@ -83,4 +82,34 @@ span.qus{
 }
 span.qus:hover{color:white;background-color: rgb(135, 163, 255);text-decoration: none;cursor: pointer;}
 .ad span:hover{color: rgb(245, 0, 0);background-color: rgb(173, 188, 238);padding: 2px;border-radius: 10px;transition: all 400ms ease;text-decoration: none;cursor: pointer;}
-
+.qus li {
+    font-family:  "Hind Siliguri", sans-serif;
+}
+.ch li{
+    font-family:  "Hind Siliguri", sans-serif;
+}
+.ss li{
+    list-style:square;
+    font-family: "Hind Siliguri", sans-serif;
+}
+/* .img {
+   display:flex ;
+} */
+/* table */
+table{
+    border-collapse: collapse;
+    width:50%;
+    text-align: center;
+    margin:0 auto;
+    background: rgb(248, 255, 234);
+    margin-bottom: 16px;
+    
+    
+   }
+   th{
+    border: 1px solid red;background: rgb(201, 198, 198);
+   height: 30px;}
+   td{
+    border: 1px solid red;font-size: 18px;
+    height: 30px;font-family:"Hind Siliguri", sans-serif;}
+ 
