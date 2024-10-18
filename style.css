@@ -2,7 +2,7 @@ body{
     font-family: "Hind Siliguri", sans-serif;
     padding: 0;
     width: 99.9%;
-
+    overflow-x: hidden;
     margin-left:10px;
     position:sticky;
 }
