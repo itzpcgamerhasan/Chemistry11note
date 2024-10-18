@@ -125,7 +125,10 @@ table{
     @media only screen and (max-width: 768px) {
        body{
         margin-left: 0px;
-        width:93%
+       
+       }
+       .basics h3, .qus h3{
+        font-size: 30px;
        }
     }
     @font-face {
