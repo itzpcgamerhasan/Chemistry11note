@@ -1,8 +1,10 @@
 body{
     font-family: "Hind Siliguri", sans-serif;
     padding: 0;
-    width: 97%;
+    width: 100%;
+    scale: 1.01;
     margin-left:10px;
+    position:sticky;
 }
 header{
     position: sticky;
@@ -63,10 +65,18 @@ hr{
 .basics h3, .qus h3{
     text-align: center;
     border-bottom: 1px dotted gray;
-    margin-left: -38px;
-    color: rgb(143, 145, 255);
-    
+   background-color: rgb(79, 149, 255);
+    color: rgb(255, 255, 255);
+    border-top: 1px dotted gray;
+    letter-spacing: 2px;
+    font-family: 'MyCustomFont';
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    text-shadow: 1px 3px rgb(0, 0, 0);
+    margin-left: -58px;
 }
+
 ul ul li {
     font-family: "Baloo Da 2", sans-serif;
     font-weight: 600;
@@ -112,4 +122,14 @@ table{
    td{
     border: 1px solid red;font-size: 18px;
     height: 30px;font-family:"Hind Siliguri", sans-serif;}
- 
+    @media only screen and (max-width: 768px) {
+       body{
+        margin-left: 0px;
+        width:93%
+       }
+    }
+    @font-face {
+        font-family: 'MyCustomFont';
+        src: url('https://raw.githubusercontent.com/itzpcgamerhasan/Fonts/main/head_linebangla.ttf');
+    }
+   
