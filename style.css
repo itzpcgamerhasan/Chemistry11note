@@ -1,8 +1,8 @@
 body{
     font-family: "Hind Siliguri", sans-serif;
     padding: 0;
-    width: 100%;
-  
+    width: 99.9%;
+
     margin-left:10px;
     position:sticky;
 }
@@ -123,16 +123,22 @@ table{
     border: 1px solid red;font-size: 18px;
     height: 30px;font-family:"Hind Siliguri", sans-serif;}
     @media only screen and (max-width: 768px) {
-       body{
+       
+        body{
         margin-left: 0px;
+        padding:5px;
        
        }
        .basics h3, .qus h3{
-        font-size: 30px;
+        font-size: 25px;
        }
     }
     @font-face {
         font-family: 'MyCustomFont';
         src: url('https://raw.githubusercontent.com/itzpcgamerhasan/Fonts/main/head_linebangla.ttf');
     }
-   
+    @font-face {
+        font-family: 'banglak';
+        src: url('https://raw.githubusercontent.com/itzpcgamerhasan/Fonts/main/AkhandBengali-Extrabold.otf');
+    }
+    .qus .h3{font-family:'banglak';}
