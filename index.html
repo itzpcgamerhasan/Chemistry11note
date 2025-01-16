@@ -2,424 +2,309 @@
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' rel='stylesheet'/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
-    <script crossorigin='anonymous' src='https://kit.fontawesome.com/e0b18c749a.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পড়ার ট্র্যাকার</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin: 10px 0;
+        }
+        h1:hover, h2:hover {
+            color: #388E3C;
+            transition: color 0.3s ease-in-out;
+        }
+        .date {
+            text-align: right;
+            font-size: 16px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 12px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+        td {
+            text-align: left;
+            background-color: #ffffff;
+        }
+        td:hover {
+            background-color: #f4f4f4;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .history {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .history-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+        }
+        .history-button:hover {
+            background-color: #388E3C;
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: black;
+            text-decoration: none;
+        }
+        .date-select {
+            margin-top: 10px;
+            font-size: 16px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-button {
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+        }
+        .submit-button:hover {
+            background-color: #388E3C;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <header>
- 
-        <div class="title"><h1>জীবাশ্ম</h1></div></header>
-   
-        <div class="basics">
-        
-        <h2>সাধারন জ্ঞান</h2>
-        
-        <ul>
-            <h3>সমগোত্রীয় শ্রেনী</h3>
-            <li>অ্যালকেন⇨<span>CnH<sub>2n+2</sub></span> (এন) <span>(C-C)</span></li>
-            <li>অ্যালকিন⇨<span>CnH<sub>2n</sub></span> (ইন) <span>(C=C)</span></li>
-            <li>অ্যালকাইন⇨<span>CnH<sub>2n-2</sub></span> (আইন) <span>(C≡C)</span></li>
-            <li>অ্যালকোহল⇨<span>CnH<sub>2n+1</sub>OH</span>(নল) <span>(C-C)</span></li>
-            <li>অ্যালডিহাইড⇨<span>CnH<sub>2n+1</sub>CHO </span>(ন্যাল)<span>(C-C)</span></li>
-            <li>কার্বক্সিলিক এসিড⇨<span>CnH<sub>2n+1</sub>COOH </span>(নয়িক এসিড)<span>(C-C)</span></li> 
-        </ul>
-        
-        <ul>
-        <h3>নামকরণের ক্ষেত্রে</h3> 
-        
-            <li> কার্বন সংখ্যা ১ হলে মিথ</li>
-            <li> কার্বন সংখ্যা ২ হলে ইথ</li>
-            <li> কার্বন সংখ্যা ৩ হলে প্রোপ</li>
-            <li> কার্বন সংখ্যা ৪ হলে বিউট</li>
-            <li> কার্বন সংখ্যা ৫ হলে পেন্ট</li>
-            <li> কার্বন সংখ্যা ৬ হলে হেক্স</li>
-            <li> কার্বন সংখ্যা ৭ হলে হেপ্ট</li>
-            <li> কার্বন সংখ্যা ৮ হলে অক্ট</li>
-            <li> কার্বন সংখ্যা ৯ হলে নন</li>
-            <li> কার্বন সংখ্যা ১০ হলে ডেক</li>
-        </ul>
+    <div class="date" id="currentDate"></div>
+    <h1>পড়ার রুটিন</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>বিষয়ের নাম</th>
+                <th>পড়ার সময়</th>
+                <th>সম্পন্ন হয়েছে</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="label1">বাংলা প্রথম পত্র</td>
+                <td>সকাল ৬:৩০ - ৭:১০</td>
+                <td><input type="checkbox" id="subject1" onchange="saveProgress(this, 'subject1')"></td>
+            </tr>
+            <tr>
+                <td id="label2">বাংলা দ্বিতীয় পত্র</td>
+                <td>সকাল ৭:১০ - ৭:৫০</td>
+                <td><input type="checkbox" id="subject2" onchange="saveProgress(this, 'subject2')"></td>
+            </tr>
+            <tr>
+                <td id="label3">ইংরেজি প্রথম পত্র</td>
+                <td>সকাল ৭:৫০ - ৮:৩০</td>
+                <td><input type="checkbox" id="subject3" onchange="saveProgress(this, 'subject3')"></td>
+            </tr>
+            <!-- Add more rows as needed -->
+             <!-- সকাল ৯:০০ - ১১:৪০ -->
+            <tr>
+                <td>ইংরেজি ২য় পত্র</td>
+                <td>সকাল ৯:০০ - ৯:৪০</td>
+                <td><input type="checkbox" id="subject4" onchange="saveProgress(this, 'subject4')"></td>
+            </tr>
+            <tr>
+                <td>গণিত</td>
+                <td>সকাল ৯:৪০ - ১০:২০</td>
+                <td><input type="checkbox" id="subject5" onchange="saveProgress(this, 'subject5')"></td>
+            </tr>
+            <tr>
+                <td>উচ্চতর গণিত</td>
+                <td>সকাল ১০:২০ - ১১:০০</td>
+                <td><input type="checkbox" id="subject6" onchange="saveProgress(this, 'subject6')"></td>
+            </tr>
+            <tr>
+                <td>পদার্থ বিজ্ঞান</td>
+                <td>সকাল ১১:০০ - ১১:৪০</td>
+                <td><input type="checkbox" id="subject7" onchange="saveProgress(this, 'subject7')"></td>
+            </tr>
+
+            <!-- রাত ৭:০০ - ১০:২০ -->
+            <tr>
+                <td>রসায়ন</td>
+                <td>রাত ৭:০০ - ৭:৪০</td>
+                <td><input type="checkbox" id="subject8" onchange="saveProgress(this, 'subject8')"></td>
+            </tr>
+            <tr>
+                <td>জীববিজ্ঞান</td>
+                <td>রাত ৭:৪০ - ৮:২০</td>
+                <td><input type="checkbox" id="subject9" onchange="saveProgress(this, 'subject9')"></td>
+            </tr>
+            <tr>
+                <td>সমাজ</td>
+                <td>রাত ৮:২০ - ৯:০০</td>
+                <td><input type="checkbox" id="subject10" onchange="saveProgress(this, 'subject10')"></td>
+            </tr>
+            <tr>
+                <td>ইসলাম</td>
+                <td>রাত ৯:০০ - ৯:৪০</td>
+                <td><input type="checkbox" id="subject11" onchange="saveProgress(this, 'subject11')"></td>
+            </tr>
+            <tr>
+                <td>তথ্য ও যোগাযোগ প্রযুক্তি</td>
+                <td>রাত ৯:৪০ - ১০:২০</td>
+                <td><input type="checkbox" id="subject12" onchange="saveProgress(this, 'subject12')"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="history">
+        <button class="history-button" onclick="openHistoryModal()">ইতিহাস দেখুন</button>
     </div>
-    <div class="ad">
-        <ul><li style="list-style: square;"><h3><span class="a">অ্যালকেন:</span></h3></li></ul>
-        <h4>অ্যালকেন এ কার্বন কার্বন এক-বন্দন (C-C) থাকে এবং অ্যালকেন এর নামকরণের ক্ষেত্রে শেষে এন যোগ হয়।</h4>
-        <!-- অ্যালকিন-->
-        <ul><li style="list-style: square;"><h3><span class="a">অ্যালকিন:</span></h3></li></ul>
-        <h4>অ্যালকিন এ কার্বন কার্বন দ্বী-বন্দন (C=C) থাকে। এক্ষেত্রে যেকোনো একটা দ্বী-বন্দন থাকলেই হয়।</h4>
-        <h3><span class="a" style="font-size: 19px;">অ্যালকিন এর নামকরণ:</span></h3>
-        <ul>
-            <li>অ্যালকিন এর নামকরণের ক্ষেত্রে প্রথমে কার্বন সংখ্যা অনুযায়ী নাম বসাতে হবে।</li>
-            <li>পরে কার্বন কার্বন দ্বী-বন্দন যত নাম্বারে থাকবে তা কার্বন সংখ্যা অনুযায়ী নামের পর হাইফেন (-) দিয়ে লিখে আরেকটা হাইফেন দিয়ে ইন যোগ করতে হবে।যেই দিক থেকে নম্বর কম হবে সেইটা লিখতে হবে।প্রথমে বা শেষে দ্বী-বন্দন থাকলে শুধু কার্বন সংখ্যা অনুযায়ী নামের পর ইন যোগ করলেও সমস্যা নেই (<span class="c">C=C-C-C-C-C</span>(হেক্সইন)) <br>
-            যেমনঃ<ul>
-                <li>
-                    <span class="c">C-C-C=C-C-C</span>(হেক্স-3-ইন)।
-                </li>
-                <li>
-                    <span class="c">C-C-C-C=C-C</span>(হেক্স-2-ইন)।
-                </li>
-            </ul></li>
-        </ul>
-        <!-- অ্যালকাইন -->
-        <ul><li style="list-style: square;"><h3><span class="a">অ্যালকাইন:</span></h3></li></ul>
-        
-        <h4>অ্যালকাইন এ কার্বন কার্বন ত্রী-বন্দন (C≡C) থাকে। এক্ষেত্রে যেকোনো একটা ত্রী-বন্দন থাকলেই হয়।</h4>
-        <h3><span class="a" style="font-size: 19px;">অ্যালকাইন এর নামকরণ:</span></h3>
-        <ul>
-            <li>অ্যালকাইন এর নামকরণের ক্ষেত্রে প্রথমে কার্বন সংখ্যা অনুযায়ী নাম বসাতে হবে।</li>
-            <li>পরে কার্বন কার্বন ত্রী-বন্দন যত নাম্বারে থাকবে তা কার্বন সংখ্যা অনুযায়ী নামের পর হাইফেন (-) দিয়ে লিখে আরেকটা হাইফেন দিয়ে আইন যোগ করতে হবে।যেই দিক থেকে নম্বর কম হবে সেইটা লিখতে হবে।প্রথমে বা শেষে ত্রী-বন্দন থাকলে শুধু কার্বন সংখ্যা অনুযায়ী নামের পর আইন যোগ করলেও সমস্যা নেই (<span class="c">C≡C-C-C-C-C</span>(হেক্সআইন)) <br>
-             যেমনঃ
-             <ul>
-                <li>
-                    <span class="c">C-C-C=C-C-C</span>(হেক্স-3-আইন)।
-                </li>
-                <li>
-                    <span class="c">C-C-C-C=C-C</span>(হেক্স-2-আইন)।
-                </li>
-             </ul>
-            </li>
-        </ul>
-        <!-- অ্যালকোহল -->
-        <ul><li style="list-style: square;"><h3><span class="a">অ্যালকোহল:</span></h3></li></ul>
-        
-        <h4>অ্যালকোহল এ কার্বন কার্বন এক-বন্দন (C-C) থাকে। অধাতুর পরে OH থাকলে অ্যালকোহল বলা হয়।</h4>
-        <h3><span class="a" style="font-size: 19px;">অ্যালকোহল এর নামকরণ:</span></h3>
-        <ul>
-            <li>অ্যালকোহল এর নামকরণের ক্ষেত্রে প্রথমে কার্বন সংখ্যা অনুযায়ী নাম বসাতে হবে এবং নাম গুলোর সাথে আ-কার যোগ করতে হবে ও তারসাথে নল যোগ করতে হবে।</li>
-            
-             যেমনঃ
-             <ul>
-                <li>
-                    <span class="c">CH<sub>3</sub>OH</span>(মিথানল)।
-                </li>
-                <li>
-                    <span class="c">CH<sub>3</sub>-CH<sub>2</sub>-CH<sub>2</sub>-CH<sub>2</sub>-CH<sub>2</sub>-CH<sub>2</sub>-OH</span>(হেক্সানল)।
-                </li>
-             </ul>
-            </li>
-        </ul>
-        <!-- অ্যালডিহাইড -->
-        <ul><li style="list-style: square;"><h3><span class="a">অ্যালডিহাইড:</span></h3></li></ul>
-        
-        <h4>অ্যালডিহাইড এ কার্বন কার্বন এক-বন্দন (C-C) থাকে।</h4>
-        <h3><span class="a" style="font-size: 19px;">অ্যালডিহাইড এর নামকরণ:</span></h3>
-        <ul>
-            <li>অ্যালডিহাইড এর নামকরণের ক্ষেত্রে প্রথমে যৌগে যতগুলো কার্বন থাকবে তা অনুযায়ী নাম বসাতে হবে এবং নাম গুলোর সাথে আ-কার যোগ করতে হবে ও তারসাথে ন্যাল যোগ করতে হবে।</li>
-            
-             যেমনঃ
-             <ul>
-                <li>
-                    <span class="c">C<sub>5</sub>H<sub>11</sub>CHO</span>(ইথান্যাল)।
-                </li>
-             </ul>
-            </li>
-        </ul>
-        <ul><li style="list-style: square;"><h3><span class="a">কার্বক্সিলিক এসিড:</span></h3></li></ul>
-        
-        <h4>কার্বক্সিলিক এসিড এ কার্বন কার্বন এক-বন্দন (C-C) থাকে।</h4>
-        <h3><span class="a" style="font-size: 19px;">কার্বক্সিলিক এসিড এর নামকরণ:</span></h3>
-        <ul>
-            <li>কার্বক্সিলিক এসিড এর নামকরণের ক্ষেত্রে প্রথমে যৌগে যতগুলো কার্বন থাকবে তা অনুযায়ী নাম বসাতে হবে এবং নাম গুলোর সাথে আ-কার যোগ করতে হবে ও তারসাথে নয়িক এসিড যোগ করতে হবে।</li>
-            
-             যেমনঃ
-             <ul>
-                <li>
-                    <span class="c">CH<sub>3</sub>COOH</span>(ইথানয়িক এসিড)।
-                </li>
-             </ul>
-            </li>
-        </ul>
 
-
-    </div>
-     <!-- basic  -->
-    <div class="qus">
-        <h3>প্রয়োজনীয় সংজ্ঞাবলি</h3>
-        <ul>
-            <li> <span class="qus">প্রতিস্থাপকঃ</span> যারা হাইড্রোজেনকে সরানোর ক্ষমতা রাখে তাদের প্রতিস্থাপক বলে।</li>
-            যেমনঃ
-            <ul>
-                <li>F⇨ফ্লোরো</li>
-                <li>Cl⇨ক্লোরো</li>
-                <li>Br⇨ব্রোমো</li>
-                <li>I⇨আয়োডো</li>
-            </ul>
-        </ul>
-        <ul>
-            <li> <span class="qus" >জৈব যৌগঃ</span> যে যৌগে কার্বন এবং হাইড্রোজেন থাকে আকে জৈব যৌগ বলে।</li>
-            যেমনঃ
-            <ul>
-                <li>CH<sub>4</sub></li>
-            </ul>
-        </ul>
-        <ul>
-            <li> <span class="qus" >অজৈব যৌগঃ</span> যে যৌগে কার্বন এবং হাইড্রোজেন থাকে না আকে অজৈব যৌগ বলে।</li>
-            যেমনঃ
-            <ul>
-                <li>H<sub>2</sub>SO<sub>4</sub></li>
-            </ul>
-            
-        </ul>
-        <ul>
-            <li>
-                <span class="qus">অ্যালকাইল হ্যালাইডঃ </span>অ্যালকেন থেকে একতি H অপসারণ করলে অ্যালকাইল উৎপন্ন হয় । অ্যালকাইল এর সাথে হ্যালোজেন যুক্ত হয়ে অ্যালকাইল হ্যালাইড তৈরি হয়। অ্যালকেন এর নামের শেষের এন (ane) বাদ দিয়ে আইল (yl) যোগ করে অ্যালকাইল মূলকের নাম করণ করা হয়। 
-            </li>
-        </ul>
-    </div>
-    
-
-    <!-- Haidrocarbon -->
-    <div class="qus">
-        <h3>হাইড্রোকার্বনঃ</h3>
-        <h4>#কার্বন ও হাইড্রোজেন সম্বনয়ে গঠিত যৌগকে হাইড্রোকার্বন বলে। হাইড্রোকার্বন ২ প্রকারঃ</h4>
-        
-        <h4><ul>
-            <!-- alifatic -->
-            <li style="list-style: decimal;"><span class="qus" >অ্যালিফেটিক:</span> সাধারনত চর্বিজাতীয়। অ্যালিফেটিক যৌগ আবার দুই ধরনের।
-               
-               <br> যথাঃ
-                <ul class="ch">
-                    <li style="list-style: lower-roman;">
-                        মুক্তশিকল হাইড্রোকার্বন।
-                    </li>
-                    <li style="list-style: lower-roman;">
-                        বদ্ধশিকল হাইড্রোকার্বন।
-                    </li>
-                 </ul>
-               <!-- types -->
-               <h4>
-                <ul class="ss">
-                    <li>
-                    মুক্তশিকলঃ শিকলের দুই প্রান্তের কার্বন দুইটি মুক্ত অবস্থায় থাকে। মুক্তশিকল আবার দুই ধরনের।
-                    <br>যথাঃ
-                    <ul class="ch">
-                        <li style="list-style: lower-roman;">
-                            সম্পৃক্ত (কার্বন কার্বন একক বন্ধন থাকে );
-                        </li>
-                        <li style="list-style: lower-roman;">
-                            অসম্পৃক্ত (কার্বন কার্বন দ্বী-বন্দন ও ত্রী-বন্দন থাক। মাঝে মধ্যে একক বন্ধন ও থাকে)।
-                        </li>
-                    </ul>
-                    </li>
-                    <li>বদ্ধশিকলঃ কার্বন শিকলের দুই প্রান্তের কার্বন পরস্পর যুক্ত হয়ে  একটি বলয় বা চক্র গঠন করে। এসব যৌগের নামকরণের ক্ষেত্রে আগে সাইক্লো লিখতে হয়।
-                        
-                        <ul class="ch" >
-                            <li style="list-style: lower-roman;">
-                                সম্পৃক্ত;
-                            </li>
-                            <li style="list-style: lower-roman;">
-                                অসম্পৃক্ত।
-                            </li>
-                        </ul>
-                        <br>
-                        <h4 style="text-align: center;"> 
-                            <img class="imm" style="width: 30%;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6uFFA6-tdPLwee1cvX7CWLry4CHAusuAbKRhoRHgfP-djjKOv4XXv3JOheok4m50tpXr5T1UC4wNSAXtJilp1dF1SH33-qVv6QXO_9G-Mj5NjYt6H99bQOQ039b1O3PV8f6g8UdhtFHUfiQpjRCDxo9dAO8p6Cm_rfQA5oMMsDPMp_j6EQnJkqligfzvO/s1600/%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BF%E0%A6%95.png" alt="">
-                        </h4>
-                    </li>
-               </ul>
-            </h4>
-            
-            </li>
-
-            <!-- aromatic -->
-            <li style="list-style: decimal;"><span class="qus" >অ্যারোমেটিকঃ</span> অ্যারোমেটিক শব্দের অর্থ সুগন্ধ। যেমন বেনজিন (C<sub>6</sub>H<sub>6</sub>) সাধারনত 5,6,7 সদ্যসের সমতলীয় যৌগ। এগুলোতে পর্যায়ক্রমে একটি একক বন্ধন এবং তারপর একটি  দ্বী-বন্দন থাকে।
-                <br>
-                <div class="img">
-                    <h4 style="text-align: center;"><img class="imm" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeCnNUWMXWD2lHCdXuXSdmvNPadSETL_BE32yfBWGqdIVeYL-2lYowGyR56kFufftQ8mm6ZM_MI5hiMckJuAHg4iKGH4LRMLnP8tPr3fAHbZRm-uqICxfZuSPa8XgG_V0FGkTHVALj5_EzB3iUtpHxiDWJrMHAghW2YfRz7OtfqkBVwxOLaZOoFlbMGi7E/s1600/c6h6.png" alt=""></h4>
-                <h4 style="text-align: center;">বেনজিন</h4>
-                </div>
-                
-            </li>
-            
-        </ul></h4>
-       
-        
-    </div>
-    
-    <div class="qus">
-        <h3>প্রতিস্থাপকযুক্ত যৌগের নামকরণ</h3>
-
-         <ul> 
-            <li>কার্বন শিকলের যত নাম্বর এ প্রতিস্থাপক থাকবে তত নম্বর এর পর (-) দিয়ে প্রতিস্থাপকের নাম বসে এবং এর পর সমগোত্রীয় যৌগের নামকরণের সাধারন নিয়মে নাম করণ করতে হবে</li>
-            <li>
-                একটি যৌগে একের অধিক প্রতিস্থাপক থাকলে নিচের তালিকার উপরের দিকের প্রতিস্থাপকগুলোর নাম আগে লিখতে হবে। প্রথম প্রতিস্থাপকের নামের পর (-) দিয়ে ২য় প্রতিস্থাপকের নাম একইভাবে লিখতে হবে।
-
-              <br>   
-                <table>
-                  <br>
-                    <thead class="th">
-                     <tr>
-                         <th>প্রতিস্থাপকের ক্রম</th>
-                         <th>প্রতিস্থাপকের নাম</th>
-                         
-                        
-                     </tr>
-                     <tr>
-                         <td>Br</td>
-                         <td>ব্রোমো</td>
-                        
-                        
-                     </tr>
-                     <tr>
-                         <td>Cl</td>
-                         <td>ক্লোরো</td>
-                         
-                        
-                     </tr>
-                     <tr>
-                         <td>F</td>
-                         <td>ফ্লোরো</td>
-                        
-                         
-                     </tr>
-                     <tr>
-                         <td>I</td>
-                         <td>আয়োডো</td>
-                         
-                         
-                     </tr>
-                    </thead>
-                 </table>
-                 
-                 <h4 style="text-align: center;"><img class="imm" style="width: 50%;margin: 0 30%;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLy10iBaPnDMqOplW3Vp5U4HqTQUU23iUWvM-31qha9YpHpsL1Ze2psw0_i6ivBObhFEiMgP40nfKuxXTFDquxO-jnR6swGXCxLsYkPo-HltrMWCwGFH2EIdjjwjbkaAT1NQpn6nLB0VEt4mnvXsaN5p0p4IOqofB5Gy82_CMvcQI-SphRFh0QCthFWVal/s1600/cl.png" alt=""></h4>
-
-            </li>
-            <li>
-              একটি যৌগে একই প্রতিস্থাপক একাধিকবার থাকলে ২ বার থাকলে ডাই ৩ বার থাকলে ট্রাই বসবে এবং একই প্রতিস্থাপক যত যত নম্বর বন্ধনে থাকবে তাদেরকে (,) দিয়ে তারপর (-) দিয়ে স্বাভাবিক নিয়মে নামকরণ করতে হবে।
-              <h4 style="text-align: center;">
-                <img class="imm" style="width: 50%;margin: 0 30%;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLrFEL229ZLaOVmlpXZNGWVJsehumEOxpoLStsoOn91NytECn4Qa_8QguV0qEwJ9ce8KbBZQWQsdmGa07lwHuR3qmnlieXTXr6zKIPKlZyv4hB8GZRgHj-iSQBqtNrAnClBj5U6M7oWPWy83Z_CX5zSrdKRJvY2k9X-yb-OoLAdr-jj-P0cX_BiLHslP7S/s1600/23.png" alt="">
-              </h4>
-            </li>
-        </ul>
-
-    </div>
-    <!-- dicarboxilation reaction -->
-     
-     <div class="qus">
-    <h3>ডিকার্বক্সিলেশন বিক্রিয়া</h3>
-    <h4>
-        # ডিকার্বক্সিলেশন বিক্রিয়ায় জৈব এসিড থেকে কার্বন হ্রাস পায়।এই বিক্রিয়া ঘটানোর জন্য প্রথমে জৈব এসিডের সাথে NaOH এর বিক্রিয়া ঘটিয়ে জৈব এসিডের সোডিয়াম লবন তৈরি করা হয়।
-        <br>
-        <br>
-        
-        তারপর জৈব এসিডের সোডিয়াম লবনকে আবার NaOH এর সাথে CaO প্রভাবক এর উপস্থিতি বিক্রিয়া করলে অ্যালকেন ও Na<sub>2</sub>CO<sub>3</sub> উৎপন্ন হয়। এই বিক্রিয়াটি ই হচ্ছে ডিকার্বক্সিলেশন বিক্রিয়া।
-        <br>
-        <h4 style="text-align: center;"><span class="c" >CH<sub>3</sub>COOH + NaOH ⇨ CH<sub>3</sub>COONa + H<sub>2</sub>O</span></h4>
-        
-        <h4 style="text-align: center;">
-            <span class="c" >CH<sub>3</sub>COONa + NaOH(CaO) ⇨CH<sub>4</sub> + Na<sub>2</sub>CO<sub>3</sub> </span>
-        </h4>
-    </h4>
-
-     </div>
-     
-     <div class="qus">
-        <h3>জৈব যৌগের রূপান্তর</h3>
-        <h4 class="h3"><ul>
-            <li>
-                <span class="cc" >ইথেন ⇨ মিথেন:</span>
-        <ul>
-            <li>উচ্চ চাপ ও তাপে বায়ুর অক্সিজেন দ্বারা ইথেন কে জারিত করলে ইথানয়িক এসিড তৈরি হয়।
-                <br>
-                <span class="c">CH<sub>3</sub>-CH<sub>3</sub> + 3[O]⇨ CH <sub>3</sub>-COOH + H<sub>2</sub>O </span>
-            </li>
-            <li>ইথানয়িক এসিডকে আবার NaOH এর সাথে বিক্রিয়া করে CH<sub>3</sub>-COONa লবন তৈরি হয়।
-                <br>
-                <span class="c">CH<sub>3</sub>-COOH + NaOH ⇨ CH<sub>3</sub>-COONa + H<sub>2</sub>O</span></li>
-            <li>প্রাপ্ত লবন আবার CaO এর উপস্থিতিতে NaOH এর সাথে বিক্রিয়া করে মিথেন তৈরি হয়।
-                <br>
-                <span class="c">CH<sub>3</sub>-COONa + NaOH(CaO) ⇨ CH<sub>4</sub> + Na<sub>2</sub>CO<sub>3</sub>(CaO)</span>
-            </li>
-        </ul>
-            </li>
-            <li><span class="cc">মিথেন ⇨ ইথেন</span>
-            <ul>
-                <li>মৃদু সূর্যালোকের উপস্থিতিতে মিথেন Br<sub>2</sub> এর সাথে বিক্রিয়া করে মিথেন ব্রোমাইড তৈরি করে।<br>
-                <span class="c">CH<sub>4</sub> + Br<sub>2</sub> (hʋ) ⇨ CH<sub>3</sub>Br + HBr</span>
-                </li>
-                <li>শুষ্ক ইথারের সাথে দুই অনু CH<sub>3</sub>Br ধাতব সোডিয়ামের সাথে উর্টজ বিক্রিয়া করে ইথেন তৈরি হয়।
-                <br><span class="c">2CH<sub>3</sub>Br + 2Na ⇨ C<sub>2</sub>H<sub>6 + 2 </sub>NaBr</span>
-                </li>
-            </ul>
-            </li>
-            <li><span class="cc">কার্বনডাই অক্সাইড  ⇨  মিথেনঃ</span>
-                <ul>
-                    <li><span class="c"> CO<sub>2</sub> + 4H<sub>2</sub>(Ni) (T=180-200) ⇨ CH<sub>4</sub> + 2 H<sub>2</sub>O </span></li>
-                </ul>
-            
-            </li>
-            <li><span class="cc">ইথাইল ক্লোরাইড ⇨ ইথিনঃ</span>
-            <ul>
-                <li>ইথাইল ক্লোরাইড এর সাথে সোডিয়াম হাইড্রোক্সাইডের জলীয় দ্রবণকে উত্তপ্ত করলে ইথিন, সোডিয়াম ক্লোরাইড এবং পানি উৎপন্ন হয়।
-                    <span class="c">CH<sub>3</sub>-CH<sub>2</sub>Cl + NaOH ⇨ CH<sub>2</sub>=CH<Sub>2</Sub> + NaCl + H₂O</span>
-                </li>
-                
-                    
-                
-            </ul>
-            </li>
-            <li><span class="cc">ইথানল ⇨ ইথিনঃ</span>
-            <ul>
-                <li> ইথানলের সাথে অতিরিক্ত গাঢ় সালফিউরিক এসিডকে উত্তপ্ত করলে ইথিন এবং পানি উৎপন্ন হয়।
-                    <span class="c">CH<sub>3</sub>-CH<sub>2</sub>-OH + (H<sub>2</sub>SO<Sub>4</Sub>) ⇨ CH<sub>2</sub>=CH<sub>2</sub> + H<sub>2</sub>O</span>
-                </li>
-            </ul>
-            </li>
-           <li><span class="cc">ইথিন ⇨ ইথানলঃ</span>
-             <ul>
-                <li>ইথিন ফসফরিক এসিডের উপস্থিতিতে ইথিন 300° তাপমাত্রাইয় এবং 60 atm চাপে জলিয় বাষ্পের সাথে বিক্রিয়া করে ইথানল উৎপন্ন করে।
-                    <span class="c">CH<sub>2</sub>=CH<sub>2</sub> + H<sub>2</sub>O (H<sub>3</sub>PO<sub>4</sub>)⇨ CH<sub>3</sub>-CH<sub>2</sub>-OH </span>
-                </li>
-             </ul>
-        
-           </li>
+    <!-- Modal -->
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeHistoryModal()">&times;</span>
+            <h2>ইতিহাস দেখুন</h2>
+            <select id="historyDates" class="date-select">
+                <option value="">তারিখ বাছাই করুন</option>
+            </select>
             <br>
-            <li><span class="cc">অ্যালকাইন ⇨ অ্যালকিন ⇨ অ্যালকাইল হ্যালাইড ⇨ অ্যালকোহল ⇨ অ্যালডিহাইড ⇨ জৈব এসিড </span>
-            <br> <br>
-            <ul class="dd">
-                <li> <span class="cd">অ্যালকাইন⇨ অ্যালকিনঃ</span><span class="c"> CH≡CH + H<sub>2</sub>(Ni) (T=180-200) ⇨ CH<sub>2</sub>=CH<sub>2</sub> </span></li>
-                
-                <li><span class="cd">অ্যালকিন ⇨ অ্যালকেনঃ</span><span class="c"> CH<sub>2</sub>=CH<sub>2</sub> + H<sub>2</sub>(Ni) (T=180-200) ⇨ CH<sub>3</sub>-CH<sub>3</span></span></li>
-                <li><span class="cd">অ্যালকেন ⇨ অ্যালকাইল হ্যালাইডঃ</span><span class="c"> CH<sub>3</sub>-CH<sub>3 </sub>+ Br<sub>2</sub> ⇨ CH<sub>3</sub>CH<sub>2</sub>Br + HBr</span></li>  
-                  <!-- অ্যালকেন ⇨ অ্যালকাইল হ্যালাইডঃ -->
-                <li><span class="cd">অ্যালকাইল হ্যালাইড  ⇨  অ্যালকোহলঃ</span><span class="c"> CH<sub>3</sub>CH<sub>2</sub>Br + NaOH  ⇨ CH<sub>3</sub>CH<sub>2</sub>OH + NaBr</span></li> 
-                <!-- অ্যালকোহল ⇨ অ্যালডিহাইডঃ -->
-                <li><span class="cd">অ্যালকোহল ⇨ অ্যালডিহাইডঃ</span><span class="c"> CH<sub>3</sub>CH<sub>2</sub>OH + [O] (K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> + H<sub>2</sub>SO<sub>4</sub>)  ⇨ CH<sub>3</sub>CHO + H<sub>2</sub>O </span></li>  
-                <!--  -->
-                <li><span class="cd">অ্যালডিহাইড  ⇨  জৈব এসিডঃ</span><span class="c"> CH<sub>3</sub>CHO + [O] (K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> + H<sub>2</sub>SO<sub>4</sub>)  ⇨ CH<sub>3</sub>COOH</span></li>  
-            </ul>
-            
-            </li>
-    
-        </ul>
-        </h4>    
-     </div>
-     <div class="qus">
-        <h3>অ্যালকেনের ধর্ম</h3>
-        <ul style="list-style: none;">
-            <li><span class="cc">রাসায়নিক ধর্মঃ</span> সাধারণ অবস্থায় এসিড, ক্ষারক, জারক বা বিজারকের সাথে বিক্রিয়া করে না। তারপরও এরা কিছু রাসায়নিক বিক্রিয়ায় অংশগ্রহণ করে। </li>
-            <li><span class="cc">ভৌত ধর্মঃ</span>
-                1 থেকে 4 কার্বন সংখ্যার সম্পৃক্ত হাইড্রোকার্বনের স্ফুটনাঙ্ক কক্ষ তাপমাত্রার নিচে তাই এগুলো গ্যাসীয় অবস্থায় থাকে। 5 থেকে 15 কার্বন সংখ্যার সম্পৃক্ত হাইড্রোকার্বনের স্ফুটনাঙ্ক কক্ষ তাপমাত্রার উপরে বলে এগুলো তরল অবস্থায় থাকে। 5 কার্বনবিশিষ্ট সম্পৃক্ত হাইড্রোকার্বন পেন্টেনের স্ফুটনাঙ্ক 36.1°C। সম্পৃক্ত হাইড্রোকার্বনের কার্বন সংখ্যা 16 থেকে বেশি হলে এগুলো কঠিন প্রকৃতির হয়।
-            </li>
-        </ul>
-
-        <h3>অসম্পৃক্ত যৌগ প্রমান</h3>
-         <ul>
-            <li>সকল অসম্পৃক্ত হাইড্রোকার্বন Br এর সাথে বিক্রিয়া করে ব্রোমিনের লাল বর্ণ অপসারণ করে। 
-                <span class="c">CH<sub>2</sub>=CH<sub>2</sub> + Br<sub>2</sub> ⇨ C<sub>2</sub>H<sub>4</sub>Br<sub>2</sub></span>
-            </li>
-         </ul>
-           
+            <button class="submit-button" onclick="showSelectedHistory()">দেখুন</button>
+            <p id="historyResult"></p>
         </div>
-    
+    </div>
+
+    <script>
+        function updateDate() {
+            const dateElement = document.getElementById('currentDate');
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = now.toLocaleDateString('bn-BD', options);
+        }
+        updateDate();
+
+        function saveProgress(checkbox, id) {
+            const isChecked = checkbox.checked;
+            const now = new Date();
+            const dateKey = now.toISOString().split('T')[0];
+            const completedSubjects = JSON.parse(localStorage.getItem(dateKey) || '[]');
+
+            if (isChecked) {
+                if (!completedSubjects.includes(id)) completedSubjects.push(id);
+            } else {
+                const index = completedSubjects.indexOf(id);
+                if (index > -1) completedSubjects.splice(index, 1);
+            }
+
+            localStorage.setItem(dateKey, JSON.stringify(completedSubjects));
+        }
+
+        function loadProgress() {
+            const now = new Date();
+            const dateKey = now.toISOString().split('T')[0];
+            const completedSubjects = JSON.parse(localStorage.getItem(dateKey) || '[]');
+
+            completedSubjects.forEach(id => {
+                const checkbox = document.getElementById(id);
+                if (checkbox) checkbox.checked = true;
+            });
+        }
+
+        function resetProgressAtMidnight() {
+            const now = new Date();
+            const msUntilMidnight =
+                new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1).getTime() - now.getTime();
+
+            setTimeout(() => {
+                localStorage.clear();
+                location.reload();
+            }, msUntilMidnight);
+        }
+
+        function openHistoryModal() {
+            const modal = document.getElementById('historyModal');
+            const historyDates = document.getElementById('historyDates');
+            modal.style.display = 'block';
+            historyDates.innerHTML = '<option value="">তারিখ বাছাই করুন</option>';
+
+            for (let i = 0; i < localStorage.length; i++) {
+                const dateKey = localStorage.key(i);
+                if (dateKey.includes('-')) {
+                    const option = document.createElement('option');
+                    option.value = dateKey;
+                    option.textContent = dateKey;
+                    historyDates.appendChild(option);
+                }
+            }
+        }
+
+        function closeHistoryModal() {
+            document.getElementById('historyModal').style.display = 'none';
+        }
+
+        function showSelectedHistory() {
+            const historyDates = document.getElementById('historyDates');
+            const dateKey = historyDates.value;
+            const historyResult = document.getElementById('historyResult');
+
+            if (dateKey) {
+                const completedSubjects = JSON.parse(localStorage.getItem(dateKey) || '[]');
+                const subjectNames = completedSubjects.map(id => document.querySelector(`#label${id.replace('subject', '')}`).textContent);
+                historyResult.textContent = `${dateKey} তারিখে সম্পন্ন হয়েছে: ${subjectNames.join(', ')}।`;
+            } else {
+                historyResult.textContent = 'অনুগ্রহ করে একটি তারিখ বাছাই করুন।';
+            }
+        }
+
+        loadProgress();
+        resetProgressAtMidnight();
+    </script>
 </body>
 </html>
