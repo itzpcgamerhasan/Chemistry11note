@@ -290,19 +290,27 @@
         }
 
         function showSelectedHistory() {
-            const historyDates = document.getElementById('historyDates');
-            const dateKey = historyDates.value;
-            const historyResult = document.getElementById('historyResult');
+    const historyDates = document.getElementById('historyDates');
+    const dateKey = historyDates.value;
+    const historyResult = document.getElementById('historyResult');
 
-            if (dateKey) {
-                const completedSubjects = JSON.parse(localStorage.getItem(dateKey) || '[]');
-                const subjectNames = completedSubjects.map(id => document.querySelector(`#label${id.replace('subject', '')}`).textContent);
-                historyResult.textContent = `${dateKey} তারিখে সম্পন্ন হয়েছে: ${subjectNames.join(', ')}।`;
-            } else {
-                historyResult.textContent = 'অনুগ্রহ করে একটি তারিখ বাছাই করুন।';
-            }
+    if (dateKey) {
+        const completedSubjects = JSON.parse(localStorage.getItem(dateKey) || '[]');
+        const subjectNames = completedSubjects.map(id => {
+            const labelElement = document.querySelector(`#label${id.replace('subject', '')}`);
+            return labelElement ? labelElement.textContent : '';
+        }).filter(name => name !== '');
+
+        if (subjectNames.length > 0) {
+            historyResult.innerHTML = `<strong>${dateKey}</strong> তারিখে সম্পন্ন হয়েছে:<ul>${subjectNames.map(name => `<li>${name}</li>`).join('')}</ul>`;
+        } else {
+            historyResult.textContent = `${dateKey} তারিখে কোনো কাজ সম্পন্ন হয়নি।`;
         }
-
+    } else {
+        historyResult.textContent = 'অনুগ্রহ করে একটি তারিখ বাছাই করুন।';
+    }
+}
+       
         loadProgress();
         resetProgressAtMidnight();
     </script>
